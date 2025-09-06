@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Caprasimo&family=Changa:wght@200..800&family=Dancing+Script:wght@400..700&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lobster&family=Manufacturing+Consent&family=Pacifico&family=Passion+One:wght@400;700;900&family=Playwrite+IT+Moderna:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Satisfy&family=Teko:wght@300..700&display=swap" rel="stylesheet">
+    <style>
+    body{
+        background-color: lavender;
+
+    }
+   
+    .top{
+        margin-left: 52rem;
+        gap: 3rem;
+        display: flex;
+        margin-top: -7rem;
+    }
+    header{
+        position: sticky;
+    }
+   
+    header img{
+       margin-left: 70px;
+        margin-top: 20px;
+        position: relative;
+    }
+    header i{
+        font-size: 35px;
+       
+    }
+    #heart{
+        font-size: 28px;
+    }
+    #cart{
+        font-size: 30px;
+        position: relative;
+    }
+    .one{
+        position: absolute;
+        top: 108px;
+        left: 88rem;
+        border-radius: 50%;
+        background-color: black;
+        color: white;
+        font-size: 10px;
+        width: 12px;
+        height: 15px;
+        text-align: center;
+    }
+    header input{
+        font-size: 35px;
+        border-radius: 10px;
+        border: 2px solid black;
+        position: relative;
+        padding: 15px;
+        width: 350px;
+        
+        
+    }
+    #search{
+        position: absolute;
+        top: 122px;
+        left: 71rem;
+        font-size: 22px;
+    }
+    .cherish{
+        position: absolute;
+        top: 84px;
+        left: 8.5rem;
+        font-family: "Dancing Script", cursive;
+        font-size: 28px;
+         }
+    .next-cherish{
+        position: absolute;
+        top: 45px;
+        left: 16rem;
+        font-family:"Dancing Script", cursive;
+        font-size: 28px;
+
+    }
+    .by{
+        padding: 20px;
+    }
+    .knot{
+        padding: 40px;
+    }
+    .craft{
+        padding: 80px;
+    }
+    .below-cherish{
+        position: absolute;
+        top: 10.4rem;
+        left: 8rem;
+        font-size: small;
+    }
+/* main */
+    nav{
+        display: flex;
+    }
+    .home-list{
+        display: flex;
+        list-style: none;
+        margin-top: 7rem;
+        gap: 8rem;
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 4rem;
+        
+    }
+    .home-list li a{
+        text-decoration: none;
+        color: black;
+        
+    }
+    .dr-menu{
+      display: none;
+      position: absolute;
+      list-style: none;
+      background: #e6c89d;
+      
+
+    }
+    .dr-menu li a{
+      display:inline-block;
+      padding: 3px;
+      font-size: 20px;
+      font-weight: 500;
+      color: black;
+      width: 250px;
+      margin-left: -30px;
+      text-decoration: none;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      transition: transform  0.3s ease;
+      position: relative;
+    }
+    .special:hover{
+      text-decoration: underline;
+    } 
+    .dr-menu li a:hover,
+    .dr-menu li a:focus {
+  text-decoration: none;
+  background-color: orange;
+  transform: scaleX(1);
+}
+    .home-list li:hover .dr-menu {
+      display: block;
+    }
+    footer{
+        margin-top: 5rem;
+        background-color: rgb(246, 219, 169);
+        height: 540px;
+    }
+    .footer-first{
+        display: flex;
+        gap: 15px;
+    }
+    .info{
+        padding: 3em;
+    }
+    .info ul{
+        list-style: none;
+        text-decoration: none;
+        width: 380px;
+    }
+    .info a{
+        text-decoration: none;
+    }
+    .info li{
+        color: black;
+        font-size: x-large;
+        margin-left: -1rem;
+        padding: 2px;
+        font-weight: 500;
+    }
+    .full-footer{
+        display: flex;
+    }
+    .quick-access{
+        display: flex;
+        gap: 40px;
+        margin: 3rem;
+        margin-left: 7rem;
+    }
+    .quick-access ul{
+        list-style: none;
+        width: 300px;
+    }
+    .quick-access a{
+        text-decoration: none;
+    }
+    .quick-access li{
+        color: black;
+        font-size: x-large;
+        margin-left: -1rem;
+        padding: 4.5px;
+        font-weight: 500;
+
+    }
+    .footer-logo{
+        width: 250px;
+    }
+    .media{
+        display: flex;
+    }
+    .social{
+        margin-top: 1rem;
+        
+    }
+ 
+    .footer-logo{
+        position: relative;
+    }
+    .footer-p{
+        position: absolute;
+    }
+    .footer-logo .next-cherish{
+        left: 54px;
+        font-size: large;
+        top: 3.5em;
+        font-weight: bold;
+        padding: 3px;
+        font-style: italic;
+    }
+    .footer-logo .below-cherish{
+        position: absolute;
+        left: 5.5em;
+        top: 12.4em;
+    }
+    svg {
+      overflow: visible;
+      position: relative;
+      margin-top: 7em;
+      margin-left: -6em;
+    }
+
+    text {
+      font-size: 20px;
+      font-family: "Georgia", serif;
+      font-weight: bold;
+      fill: #0a2740; /* dark blue color */
+      letter-spacing: 4px;
+      position: absolute;
+      margin-bottom: 1em;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="images/Copy of download__23_-removebg-preview.png" class="img-fluid" style="height: 200px; width: 200px;" alt="..." >
+        <p class="cherish">Cherish <br><span class="by">By</span></p>
+        <p class="next-cherish">Wed<br><span class="knot">Knot</span><br><span class="craft">Craft</span></p>
+        <p class="below-cherish">wedding cards</p>
+        <div class="top">
+       <a href="search.html"><input type="text" placeholder="Search...." style="font-size: medium; font-weight: 500; color: black; background-color: lavender;"></a>
+        <i id="search" class="fa-solid fa-magnifying-glass"></i>
+        <i class="bi bi-person"></i>
+        <i id="heart" class="bi bi-suit-heart"></i>
+    
+        <i id="cart" class="bi bi-cart3"></i>
+        <p class="one">1</p>
+        </div>
+    </header>
+
+     <section>
+        <nav>
+            <ul class="home-list">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="wedding-invitation.html">Wedding Invitation</a></li>
+        <li>
+          <a class="special" href="#">Special Occasions</a>
+          <ul class="dr-menu">
+            <li><a href="#">Birthday Invitations</a></li>
+            <li><a href="#">Puberty Cards</a></li>
+              <li><a href="#">Luxury Cards</a></li>
+                <li><a href="#">Ear Boring Cards</a></li>
+                  <li><a href="#">Engagement Cards</a></li>
+                    <li><a href="#">House Cards</a></li>
+                      <li><a href="#">Anniversary Cards</a></li>
+          </ul>
+        
+        </li>
+        <li><a class="special" href="#">Theme Cards</a>
+        <ul class="dr-menu">
+            <li><a href="#">Beach Theme Cards </a></li>
+            <li><a href="#">Bride Theme Cards</a></li>
+              <li><a href="#">Box Cards</a></li>
+                <li><a href="#">Single Sheet Cards</a></li>
+        </ul>
+        </li>
+        <li><a class="special" href="#">Scroll Invitation</a>
+        <ul class="dr-menu">
+            <li><a href="#">Small Size Scroll</a></li>
+            <li><a href="#">Box Scroll</a></li>
+              <li><a href="#">Only Scroll</a></li>
+                <li><a href="#">High End Scroll</a></li>
+        </ul>
+        </li>
+        <li><a class="special" href="#">Digital Invitation</a>
+        <ul class="dr-menu">
+            <li><a href="#">Whatsapp Cards</a></li>
+            <li><a href="#">Save the Date Cards</a></li>
+        </ul>
+        </li>
+            </ul>
+        </nav>
+    </section >
+
+    <div style="margin-bottom: 5em;">
+    <div style="width: 300px;height: 300px;background-color: orange;border-radius: 50%;position: relative;margin-left: 40em;">
+        <svg width="500" height="200">
+  <!-- Define arc path -->
+  <path id="curve" d="M 50,150 A 200,200 0 0,1 450,150" fill="transparent" />
+
+  <!-- Attach text to path -->
+  <text>
+    <textPath href="#curve" startOffset="50%" text-anchor="middle">
+      ORDER CONFIRMED
+    </textPath>
+  </text>
+</svg>
+         <img style="margin-left: 8em;margin-top: -11em;position:absolute;" src="images/icons8-tick-50.png">
+        <img style="width: 20px;height: 20px;position: absolute;margin-left: 5em;margin-top: -15em;" src="images/download__19_-removebg-preview.png">
+        <img style="width: 20px;height: 20px;position: absolute;margin-left: 8em;margin-top: -12em;" src="images/download__19_-removebg-preview.png">
+                <img style="width: 20px;height: 20px;position: absolute;margin-left: 11em;margin-top: -8em;" src="images/download__19_-removebg-preview.png">
+                <img style="width: 20px;height: 20px;position: absolute;margin-left: 15em;margin-top: -5em;" src="images/download__19_-removebg-preview.png">
+    </div>
+    </div>
+    
+
+    <section style="display: flex;margin-bottom: 2em;">
+        <div>
+            <h2 style="font-weight: 700;margin-left: 4em;margin-bottom: 1em;">Your Order</h2>
+            <h3 style="font-weight: 500;margin-left: 4.5em;margin-bottom: 1em;">Order ID:356958190</h3>
+            <h3 style="font-weight: 500;margin-left: 4.5em;">Thank You! Your Order has been confirmed.</h3>
+            
+        </div>
+        <div style="border: 1px solid white;margin-left: 10em;width: 550px;">
+            <h3 style="font-weight: 700;margin-left: 1em;margin-bottom: 1em;">Customer</h3>
+            <div style="display: flex;gap: 2em;margin-left: 1em;margin-bottom: 1em;">
+            <img src="images/icons8-administrator-male-26.png">
+            <p style="font-size: 25px;color: gray;font-weight: 600;">Jhon</p>
+            </div>
+
+             <div style="display: flex;gap: 2em;margin-left: 1em;">
+            <img src="images/icons8-bag-26.png">
+            <p style="font-size: 25px;color: gray;font-weight: 600;">1 order</p>
+            </div>
+        </div>
+    </section>
+
+    <section style="display: flex; margin-bottom: 2em;">
+        <div style="display: flex;gap: 2em;margin-left: 6em; border: 1px solid white;padding: 20px;width: 600px;">
+            <img style="width: 150px;height: 150px;background-color: white;border-radius: 10px;" src="images/Elegant_Vintage_Wedding_Invitations-removebg-preview.png">
+            <div style="width: 200px;height: 120px;background-color: orange;border-radius: 10px;font-size: x-large;font-weight: 600;">
+            <p style="text-align: center;padding: 5px;">SKU:KSN0054</p>
+            <P style="text-align: center;">SN (SN 54)</P>
+            </div>
+
+            <div style="display: flex;">
+            <p style="font-size: larger;font-weight: 600;margin-top: 50px;">Rs.153.00 </p>
+            <img style="width: 40px;height: 40px;margin-top: 50px;padding: 5px;" src="images/icons8-remove-26.png">
+            </div>
+        </div>
+
+         <div style="border: 1px solid white;margin-left: 8.5em;width: 550px;">
+            <h3 style="font-weight: 700;margin-left: 1em;margin-bottom: 1em;">Customer Information</h3>
+            <div style="display: flex;gap: 2em;margin-left: 1em;margin-bottom: 1em;">
+            <img src="images/icons8-email-26.png">
+            <p style="font-size: 25px;color: gray;font-weight: 600;">jhon057@gmail.com</p>
+            </div>
+
+             <div style="display: flex;gap: 2em;margin-left: 1em;">
+            <img src="images/icons8-phone-26.png">
+            <p style="font-size: 25px;color: gray;font-weight: 600;">1 order</p>
+            </div>
+        </div>
+
+    </section>
+
+    <section style="display: flex;">
+        <div style="border: 1px solid white;width: 600px;margin-left: 6em;height: 350px;">
+            <h3 style="font-weight: 700;margin-left: 4em;margin-left: 1em;margin-bottom: 1em;">Order Summary</h3>
+            <div style="margin-left: 1em;font-size:25px;font-weight: 500;">
+            <p>Subtotal <span style="margin-left: 355px;">Rs.153.40</span></p>
+            <p>Shipping Charge  <span style="margin-left: 263px;">Rs.0.00</span></p>
+            <p>Taxes <span style="margin-left: 390px;">18%</p>
+            <p>Discount  <span style="margin-left: 350px;">Rs.5.00</span></p>
+            
+            <hr>
+            <p style="font-weight: 700;">Total<span style="margin-left: 400px;font-weight: 700;">Rs.148.00</span></p>
+        </div>
+        </div>
+
+        <div style="border: 1px solid white;margin-left: 8.5em;width: 550px;height: 220px;">
+            <h3 style="font-weight: 700;margin-left: 1em;margin-bottom: 1em;">Shipping Address</h3>
+            <div style="display: flex;gap: 2em;margin-left: 1em;margin-bottom: 1em;">
+            <img src="images/icons8-administrator-male-26.png">
+            <p style="font-size: 25px;color: gray;font-weight: 600;">jhon</p>
+            </div>
+
+             <div style="display: flex;gap: 2em;margin-left: 1em;">
+            <p style="font-size: 25px;color: gray;font-weight: 600;">123 Elm street Anytown,ABC 12345<br>Anywhere.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <section style="margin-left: 46em;margin-top: -6em;">
+        <div style="border: 1px solid white;width: 550px;margin-left: 6em;">
+            <h3 style="font-weight: 700;margin-left: 1em;">Billing Address</h3>
+            <p style="font-size: 25px;color: gray;font-weight: 500;margin-left: 1em;">Same as Shipping address</p>
+        </div>
+    </section>
+
+    <a href="wedding-invitation.html"><button style="background-color: orange;padding: 5px;margin: 4em;margin-left: 605px;width: 350px;height: 80px;border: none;border-radius: 15px;font-size: 30px;font-weight: 600;">Continue Shopping</button></a>
+
+</body>
+</html>

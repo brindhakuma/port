@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Caprasimo&family=Changa:wght@200..800&family=Dancing+Script:wght@400..700&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lobster&family=Manufacturing+Consent&family=Pacifico&family=Passion+One:wght@400;700;900&family=Playwrite+IT+Moderna:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Satisfy&family=Teko:wght@300..700&display=swap" rel="stylesheet">
+    <style>
+    body{
+        background-color: lavender;
+        height: 500vh;
+    }
+   
+    .top{
+        margin-left: 52rem;
+        gap: 3rem;
+        display: flex;
+        margin-top: -7rem;
+    }
+    header{
+        position: sticky;
+    }
+   
+    header img{
+       margin-left: 70px;
+        margin-top: 20px;
+        position: relative;
+    }
+    header i{
+        font-size: 35px;
+       
+    }
+    #heart{
+        font-size: 28px;
+    }
+    #cart{
+        font-size: 30px;
+        position: relative;
+    }
+    .one{
+        position: absolute;
+        top: 108px;
+        left: 88rem;
+        border-radius: 50%;
+        background-color: black;
+        color: white;
+        font-size: 10px;
+        width: 12px;
+        height: 15px;
+        text-align: center;
+    }
+    header input{
+        font-size: 35px;
+        border-radius: 10px;
+        border: 2px solid black;
+        position: relative;
+        padding: 15px;
+        width: 350px;
+        
+    }
+    #search{
+        position: absolute;
+        top: 122px;
+        left: 71rem;
+        font-size: 22px;
+    }
+    .cherish{
+        position: absolute;
+        top: 84px;
+        left: 8.5rem;
+        font-family: "Dancing Script", cursive;
+        font-size: 28px;
+         }
+    .next-cherish{
+        position: absolute;
+        top: 45px;
+        left: 16rem;
+        font-family:"Dancing Script", cursive;
+        font-size: 28px;
+
+    }
+    .by{
+        padding: 20px;
+    }
+    .knot{
+        padding: 40px;
+    }
+    .craft{
+        padding: 80px;
+    }
+    .below-cherish{
+        position: absolute;
+        top: 10.4rem;
+        left: 8rem;
+        font-size: small;
+    }
+/* main */
+    nav{
+        display: flex;
+    }
+    .home-list{
+        display: flex;
+        list-style: none;
+        margin-top: 7rem;
+        gap: 8rem;
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 4rem;
+        
+    }
+    .home-list li a{
+        text-decoration: none;
+        color: black;
+        
+    }
+    .dr-menu{
+      display: none;
+      position: absolute;
+      list-style: none;
+      background: #e6c89d;
+      
+
+    }
+    .dr-menu li a{
+      display:inline-block;
+      padding: 3px;
+      font-size: 20px;
+      font-weight: 500;
+      color: black;
+      width: 250px;
+      margin-left: -30px;
+      text-decoration: none;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      transition: transform  0.3s ease;
+      position: relative;
+    }
+    .special:hover{
+      text-decoration: underline;
+    } 
+    .dr-menu li a:hover,
+    .dr-menu li a:focus {
+  text-decoration: none;
+  background-color: orange;
+  transform: scaleX(1);
+}
+    .home-list li:hover .dr-menu {
+      display: block;
+    }
+    
+    .paper-container {
+      position: relative;
+      width: 700px;
+      bottom: 40rem;
+    }
+
+    .paper {
+      position: absolute;
+      width: 100%;
+      background: white;
+      border: 1px solid #ddd;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      border-radius: 6px;
+      padding: 30px;
+       height: 500px;
+       margin-left: 30rem;
+       background: linear-gradient(to right,rgb(239, 237, 232),rgb(249, 249, 240),rgba(241, 238, 234, 0.964));
+    }
+
+    /* Paper behind (slanted) */
+    .paper-behind {
+      transform: rotate(-7deg);
+      top: -35px;
+      left: -15px;
+      z-index: 0;
+      height: 540px;
+      width: 700px;
+    }
+
+    /* Paper in front (straight) */
+    .paper-front {
+      z-index: 1;
+    }
+    .story{
+        padding: 25px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 700;
+    }
+    .para{
+        margin-top: 4rem;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+    }
+    .btn{
+        background-color: orange;
+        color: black;
+        position: absolute;
+        top: 25rem;
+        left: 16rem;
+        width: 200px;
+        font-weight: 700;
+        padding: 10px;
+        font-size: 20px;
+    }
+    section img{
+        margin-top: 4rem;
+        width: 1200px;
+        margin-left: 10rem;
+        position: relative;
+    }
+    section h3{
+        position: absolute;
+        top: 106rem;
+        left: 66rem;
+        color: white;
+        
+    }
+    .shopnow{
+        position: absolute;
+        color: black;
+        border: none;
+        top: 108rem;
+        left: 68rem;
+        margin: 25px;
+        border-radius: 15px;
+        width: 150px;
+        background-color: lightgray;
+    }
+    .uni-heading{
+        text-align: center;
+        margin-top: 5rem;
+        font-weight: bold;
+    }
+    .unique{
+        text-align: center;
+        font-size: 30px;
+        font-weight: 600;
+    }
+    .home-cards{
+       display: grid;
+       grid-template-columns: 1fr 1fr 1fr 1fr;
+       align-items: center;
+       text-align: center;
+        margin: 1rem;
+    }
+    .home-cards img{
+        width: 300px;
+        height: 300px;
+        background-color: rgb(243, 247, 233);
+       
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+
+    }
+    .four-cards{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: larger;
+        font-weight: 600;
+        padding: 30px;
+        margin-left: 10rem;
+    }
+    /* .banner{
+        position: relative;
+        width: 760px;
+        height: 400px;
+        border: 1px solid black;
+        
+    } */
+     .banner{
+        position: relative;
+       border: 1px solid black;
+       background-image: linear-gradient(rgb(200, 250, 235),rgb(188, 144, 144));
+    }
+    .brown-design{
+        position: absolute;
+        left: 15rem;
+        top: 193rem;
+        
+    }
+
+    .design{
+        position: absolute;
+        height: 391px;
+        width: 275px;
+        background-color: rgb(48, 20, 20);
+        top: 194.4rem;
+        left: 29rem;
+        
+    }
+    .heading{
+        position: absolute;
+        font-size: 18.5px;
+        font-weight: 700;
+        top: 203rem;
+        left: 3rem;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .first-para{
+        position: absolute;
+        top: 209rem;
+        left: 3rem;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 600;
+        font-size: 15px;
+    }
+    .second-para{
+        position: absolute;
+        top: 205rem;
+        left: 27rem;
+        color: black;
+        
+    }
+    .second-para span{
+        margin: 1rem;
+    }
+    .double{
+        display: flex;
+        
+    }
+    .banner-two{
+        position: relative;
+        left: 34rem;
+        background-image: linear-gradient(rgb(200, 250, 235),rgb(188, 144, 144));
+        border: 1px solid black;
+        
+    }
+    .design-two{
+        position: absolute;
+        height: 391px;
+        width: 275px;
+        background-color: rgb(48, 20, 20);
+        top: 194.4rem;
+        left: 50rem;
+       
+
+    }
+    .brown-design-two{
+        position: absolute;
+        top: 193rem;
+        left: 45rem;
+
+    }
+    .ring{
+        position: absolute;
+        left: 46.5rem;
+        top: 202.4rem;
+        transform: rotate(20deg);
+    }
+    .heading-two{
+        position: absolute;
+        font-size: 18.5px;
+        font-weight: 700;
+        top: 201rem;
+        left: 71rem;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .third-para{
+        position: absolute;
+        top: 206rem;
+        left: 58rem;
+        font-weight: bold;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: large;
+        color: black;
+    }
+    .afford-cards{
+        height: 450px;
+        width: 360px;
+        background: rgb(243, 247, 233);
+        margin: 5rem;
+        border-radius: 15px;
+        position: relative;
+    }
+    .affordable{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .premium{
+        margin-top: 2rem;
+    }
+    .premium img{
+        object-fit: cover;
+        width: 100rem;
+        margin: 0;
+        height: 45rem;
+        padding: 0;
+        position: relative;
+    }
+    .premium p{
+        position: absolute;
+        top: 314rem;
+        left: 1rem;
+        font-size: 8em;
+        font-weight: bolder;
+        color: rgba(235, 211, 29, 0.918);
+    }
+    .pre-span{
+        font-family: cursive;
+        font-style: italic;
+        position: absolute;
+        color: black;
+        font-weight: 100;
+        font-size: 23px;
+        top: 7rem;
+        right: 17rem;
+        transform: rotate(-35deg);
+        letter-spacing: 3px;
+    }
+    .unorder{
+        position: absolute;
+        list-style: none;
+        top: 309em;
+        left: 51.5rem;
+        
+    }
+    .unorder li{
+        font-size: xx-large;
+        font-weight: 900;
+        padding: 10px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .premium button{
+        width: 550px;
+        position: absolute;
+        top: 279em;
+        left: 24em;
+        height: 60px;
+        border-radius: 15px;
+        background-color: orange;
+        border: none;
+        font-size: larger;
+        font-weight: 600;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .premium .para-small{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 30px;
+        color: black;
+        top: 340rem;
+        left: 16em;
+        font-weight: 100;
+    }
+    .bride{
+        display: flex;
+    }
+    
+    .bride-groom{
+        margin: 0;
+        padding: 0;
+        margin-top: 4em;
+       
+    }
+    .bride-groom img{
+        margin-left:2rem;
+        
+    }
+    .bride-groom div{
+        background-color: white;
+        width: 350px;
+        height: 130px;
+        margin-left: 2rem;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+    .bride-groom h1{
+        margin-left:2rem;
+        font-size: 22px;
+        padding: 10px;
+       
+    }
+    .bride-groom button{
+        margin-left: 6rem;
+        padding: 10px;
+        width: 150px;
+        border: none;
+        border-radius: 10px;
+        background-color: orange;
+        font-weight: 700;
+        font-size: large;
+        
+    }
+    .bride-groom button:hover{
+        background-color: rgb(227, 179, 90);
+        transition: 0.5s;
+    }
+    .reviews{
+        margin: 2em;
+        background-color: white;
+        width: 400px;
+        text-align: center;
+        height: 420px;
+        margin-left: 2.5em;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .review-card{
+        display: flex;
+        align-items: center;
+        margin-left: 3rem;
+    }
+    .icons{
+        display: flex;
+        margin-left: -4.5rem;
+    }
+    .icons-detail p{
+        font-weight: 700; 
+        padding: 10px;
+        margin-left: 7.5rem;
+    
+    }
+    footer{
+        margin-top: 5rem;
+        background-color: rgb(246, 219, 169);
+        height: 540px;
+    }
+    .footer-first{
+        display: flex;
+        gap: 15px;
+    }
+    .info{
+        padding: 3em;
+    }
+    .info ul{
+        list-style: none;
+        text-decoration: none;
+        width: 380px;
+    }
+    .info a{
+        text-decoration: none;
+    }
+    .info li{
+        color: black;
+        font-size: x-large;
+        margin-left: -1rem;
+        padding: 2px;
+        font-weight: 500;
+    }
+    .full-footer{
+        display: flex;
+    }
+    .quick-access{
+        display: flex;
+        gap: 40px;
+        margin: 3rem;
+        margin-left: 7rem;
+    }
+    .quick-access ul{
+        list-style: none;
+        width: 300px;
+    }
+    .quick-access a{
+        text-decoration: none;
+    }
+    .quick-access li{
+        color: black;
+        font-size: x-large;
+        margin-left: -1rem;
+        padding: 4.5px;
+        font-weight: 500;
+
+    }
+    .footer-logo{
+        width: 250px;
+    }
+    .media{
+        display: flex;
+    }
+    .social{
+        margin-top: 1rem;
+        
+    }
+ 
+    .footer-logo{
+        position: relative;
+    }
+    .footer-p{
+        position: absolute;
+    }
+    .footer-logo .next-cherish{
+        left: 54px;
+        font-size: large;
+        top: 3.5em;
+        font-weight: bold;
+        padding: 3px;
+        font-style: italic;
+    }
+    .footer-logo .below-cherish{
+        position: absolute;
+        left: 5.5em;
+        top: 12.4em;
+    }
+    .top input{
+        font-size: medium;
+        font-weight: 500;
+        color: black;
+        background-color: lavender;
+    }
+    .top input:hover{
+        background-color: rgb(246, 217, 179);
+         cursor: pointer;
+         
+    }
+    .bluish:hover{
+        background-color: rgb(116, 157, 229);
+        transition: 0.3s ease;
+        border-radius: 15px;
+        height: 50px;
+        
+    }
+    .info a li:hover{
+        color: white;
+        
+    }
+    .quick-access a li:hover{
+        color: white;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="images/Copy of download__23_-removebg-preview.png" class="img-fluid" style="height: 200px; width: 200px;" alt="..." >
+        <p class="cherish">Cherish <br><span class="by">By</span></p>
+        <p class="next-cherish">Wed<br><span class="knot">Knot</span><br><span class="craft">Craft</span></p>
+        <p class="below-cherish">wedding cards</p>
+        <div class="top">
+       <a href="search.html"><input type="text" placeholder="Search...." ></a>
+        <i id="search" class="fa-solid fa-magnifying-glass"></i>
+        <a class="bluish" style="color: black;" href="signup.html"><i class="bi bi-person"></i></a>
+        <a class="bluish" style="color: black;" href="wish.html"><i id="heart" class="bi bi-suit-heart"></i></a>
+    
+        <a class="bluish" style="color: black;" href="cart.html"><i id="cart" class="bi bi-cart3"></i>
+        <p class="one">1</p></a>
+        </div>
+    </header>
+    
+   <section>
+        <nav>
+            <ul class="home-list">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="wedding-invitation.html">Wedding Invitation</a></li>
+        <li>
+          <a class="special" href="#">Special Occasions</a>
+          <ul class="dr-menu">
+            <li><a href="#">Birthday Invitations</a></li>
+            <li><a href="#">Puberty Cards</a></li>
+              <li><a href="#">Luxury Cards</a></li>
+                <li><a href="#">Ear Boring Cards</a></li>
+                  <li><a href="#">Engagement Cards</a></li>
+                    <li><a href="#">House Cards</a></li>
+                      <li><a href="#">Anniversary Cards</a></li>
+          </ul>
+        
+        </li>
+        <li><a class="special" href="#">Theme Cards</a>
+        <ul class="dr-menu">
+            <li><a href="#">Beach Theme Cards </a></li>
+            <li><a href="#">Bride Theme Cards</a></li>
+              <li><a href="#">Box Cards</a></li>
+                <li><a href="#">Single Sheet Cards</a></li>
+        </ul>
+        </li>
+        <li><a class="special" href="#">Scroll Invitation</a>
+        <ul class="dr-menu">
+            <li><a href="#">Small Size Scroll</a></li>
+            <li><a href="#">Box Scroll</a></li>
+              <li><a href="#">Only Scroll</a></li>
+                <li><a href="#">High End Scroll</a></li>
+        </ul>
+        </li>
+        <li><a class="special" href="#">Digital Invitation</a>
+        <ul class="dr-menu">
+            <li><a href="#">Whatsapp Cards</a></li>
+            <li><a href="#">Save the Date Cards</a></li>
+        </ul>
+        </li>
+            </ul>
+        </nav>
+    </section>
+     
+    <img src="images/background image.jpg" style="width: 100%; height: 800px;">
+    
+    <div class="paper-container">
+    <div class="paper paper-behind"></div>
+    <div class="paper paper-front">
+        <a href="wedding-invitation.html"><button class="btn">Get your style</button></a>
+      <h2 class="story">Your Love Story Begins Here</h2>
+      <p class="para">
+        Create stunning wedding invitations that capture the <br>essence of your special day. 
+        Elegant designs, heartfelt <br>words, and everything you need to make your first<br> 
+        impression unforgettable.
+      </p>
+    </div>
+    </div>
+  </div>
+  
+  <section>
+    <img src="images/lasercut big.jpg">
+    <h3>Laser Cut Invitations</h3>
+    <button class="shopnow">Shop Now</button>
+  </section>
+
+  <section>
+    <h1 class="uni-heading">Unique & Exclusive Invitation Cards</h1>
+    <p class="unique">Because Each Wedding is Truly Unique and Memorable</p>
+  </section>
+
+  <section class="home-cards">
+    <div>
+    <img src="images/Editable_Indian_Wedding_Invitations___Hindu_Wedding_Invite___Flower_Frame_Wedding_Card___Printable___Instant_Download___Corjl_IWIM_-_Etsy_UK-removebg-preview.png">
+    <p class="four-cards">Hindu Wedding Cards</p>
+    </div>
+
+    <div>
+    <img src="images/Invitation_Luxury_PSD__High_Quality_Free_PSD_Templates_for_Download___Freepik-removebg-preview.png">
+    <p class="four-cards">Luxury Cards</p>
+    </div>
+
+    <div>
+    <img src="images/Floral_Indian_wedding_invitation_card_design_in_frabic-removebg-preview.png">
+    <p class="four-cards">Floral Wedding Cards</p>
+    </div>
+
+    <div>
+    <img src="images/Buy_Scroll_Wedding_Invitations___Personalized___Vintage_Styles-removebg-preview.png">
+    <p class="four-cards">Scroll Cards</p>
+    </div>
+</section>
+
+<section>
+    <h1 style="font-weight: 700; text-align: center;">Theme Based Invitation</h1>
+    <p style="font-size: 25px; font-weight: 500; text-align: center;">Theme Based Invitation</p>
+</section>
+
+<section class="home-cards">
+    <div>
+    <img src="images/Beach_Wedding_Invitation_Set__Wedding_Invitation_Template_2_Set__Editable_Wedding_Invitation__Editable_on_Canva___Digital_Download__Seashell-removebg-preview.png">
+    <p class="four-cards">Beach Theme Cards</p>
+    </div>
+
+    <div>
+        <img src="images/Evite_Paperless_Wedding_Invitation_Aqua_Love_Birds-removebg-preview.png">
+        <p class="four-cards">Birds Theme Cards</p>
+    </div>
+
+    <div>
+        <img src="images/Watercolor_Arabian_Lattice_Arch_Muslim_Wedding_Invitation-removebg-preview.png">
+        <p class="four-cards">Palace Theme Cards</p>
+    </div>
+</section>
+
+<section class="double">
+
+    <div>
+    <img class="banner" src="images/Free_Digital_Images_Vintage__Gif_And_Clip_Art_-_Artsy_Bee_Digital__294-removebg-preview.png" style="width: 480px; height: 390px;margin: 0; padding: 0;">
+    <p class="heading">Join our love-letters list and enjoy<br>20% off your first set of wedding<br>invitations.</p>
+    <p class="first-para">Simple,beautiful,and easy on your budget.</p>
+    <div class="design"></div>
+    <img class="brown-design"  src="images/download__8_-removebg-preview.png" style="width: 250px; height: 333px; border: none;">
+    <h3 class="second-para"><span>Get 20% Off</span><br>Your First Order</h3>
+    </div>
+
+    <div>
+     <img class="banner-two" src="images/Three_Dimensional_Border_PNG_Transparent__Continental_Exquisite_Three_Dimensional_Pattern_White_Border__Continental__Fine__Three_Dimensional_PNG_Image_For_Free_Download-removebg-preview (1).png" style="width: 480px; height: 390px;margin: 0; padding: 0;">
+     <p class="heading-two">Planning ahead pays off!Book your<br>order 60+ days in advance and get<br>a free set of 20 extra invites for<br>last-minute guests.</p>
+    <div class="design-two"></div>
+    <img class="brown-design-two"  src="images/download__8_-removebg-preview.png" style="width: 250px; height: 333px; border: none;">
+    <img class="ring" src="images/Astound_1_Carat_Diamond_14K_Gold_Ring_for_Women__D_Color__VS_Clarity___Luxury-removebg-preview.png" style="width: 20px; height:20px;">
+    <p class="third-para">Early Bird Bonus.</p>
+    </div>
+</section>
+
+
+    <h1 style="text-align: center; margin-top: 5rem;">Simple and affordable wedding cards</h3>
+    
+        <section class="affordable">
+    <div class="afford-cards">
+    <img src="images/Wedding_card_design_in_red_satin_cloth-removebg-preview (1).png" style="width: 300px; height: 300px; margin-left: 2rem;margin-top: 1rem;">
+    <p class="red-card" style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: larger; font-weight: 600; margin: 1rem;">Red Invite Card With <br>Bride And Groom Names</p>
+    <div>
+        <p style="font-size: larger; font-weight: 600; margin: 20px;">Rs.10.25</p>
+        <i style="position: absolute; bottom: 0.5rem; left:18rem;font-size: larger;" class="bi bi-heart"></i>
+        <i style="position: absolute; bottom: 0.7rem; left: 20rem; font-size: larger;"  class="bi bi-handbag"></i>
+    </div>
+</div>
+
+     <div class="afford-cards">
+    <img src="images/Download_Decorative_Hindu_Wedding_Card_Vector_for_free-removebg-preview.png " style="width: 300px; height: 300px; margin-left: 2rem;margin-top: 1rem;">
+    <p class="red-card" style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: larger; font-weight: 600; margin: 1rem;">Red Invite Card With <br>Bride And Groom Names</p>
+    <div>
+        <p style="font-size: larger; font-weight: 600; margin: 20px;">Rs.10.25</p>
+        <i style="position: absolute; bottom: 0.5rem; left:18rem;font-size: larger;" class="bi bi-heart"></i>
+        <i style="position: absolute; bottom: 0.7rem; left: 20rem; font-size: larger;"  class="bi bi-handbag"></i>
+    </div>
+</div>
+
+     <div class="afford-cards">
+    <img src="images/Hindu_Low_Cost_Wedding_Invitation_Card_Design-removebg-preview.png " style="width: 300px; height: 300px; margin-left: 2rem;margin-top: 1rem;">
+    <p class="red-card" style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: larger; font-weight: 600; margin: 1rem;">Red Invite Card With <br>Bride And Groom Names</p>
+    <div>
+        <p style="font-size: larger; font-weight: 600; margin: 20px;">Rs.10.25</p>
+        <i style="position: absolute; bottom: 0.5rem; left:18rem;font-size: larger;" class="bi bi-heart"></i>
+        <i style="position: absolute; bottom: 0.7rem; left: 20rem; font-size: larger;"  class="bi bi-handbag"></i>
+    </div>
+</div>
+
+     <div class="afford-cards">
+    <img src="images/download__5_-removebg-preview.png" style="width: 300px; height: 300px; margin-left: 2rem;margin-top: 1rem;">
+    <p class="red-card" style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: larger; font-weight: 600; margin: 1rem;">Red Invite Card With <br>Bride And Groom Names</p>
+    <div>
+        <p style="font-size: larger; font-weight: 600; margin: 20px;">Rs.10.25</p>
+        <i style="position: absolute; bottom: 0.5rem; left:18rem;font-size: larger;" class="bi bi-heart"></i>
+        <i style="position: absolute; bottom: 0.7rem; left: 20rem; font-size: larger;"  class="bi bi-handbag"></i>
+    </div>
+</div>
+
+     <div class="afford-cards">
+    <img src="images/Hindu Wedding Cards Online _ Traditional Designs for Sacred Ceremonies.jpg" style="width: 300px; height: 300px; margin-left: 2rem;margin-top: 1rem;">
+    <p class="red-card" style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: larger; font-weight: 600; margin: 1rem;">Red Invite Card With <br>Bride And Groom Names</p>
+    <div>
+        <p style="font-size: larger; font-weight: 600; margin: 20px;">Rs.10.25</p>
+        <i style="position: absolute; bottom: 0.5rem; left:18rem;font-size: larger;" class="bi bi-heart"></i>
+        <i style="position: absolute; bottom: 0.7rem; left: 20rem; font-size: larger;"  class="bi bi-handbag"></i>
+    </div>
+</div>
+
+     <div class="afford-cards">
+    <img src="images/Elegant_Hindu_Wedding_Invitation_Hindu_Wedding_Invite_Simple_Gold_Indian_Wedding_Invitation_Reception_Card_Shaadi_Invitation_Wedding_Card-removebg-preview.png" style="width: 300px; height: 300px; margin-left: 2rem;margin-top: 1rem;">
+    <p class="red-card" style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: larger; font-weight: 600; margin: 1rem;">Red Invite Card With <br>Bride And Groom Names</p>
+    <div>
+        <p style="font-size: larger; font-weight: 600; margin: 20px;">Rs.10.25</p>
+        <i style="position: absolute; bottom: 0.5rem; left:18rem;font-size: larger;" class="bi bi-heart"></i>
+        <i style="position: absolute; bottom: 0.7rem; left: 20rem; font-size: larger;"  class="bi bi-handbag"></i>
+    </div>
+</div>
+</section>
+
+<section>
+    <div class="premium">
+    <img src="images/premium_photo-1675898140633-2c5647a3e0f3.jpg">
+    <p>Summer <span class="pre-span">Sale</span></p>
+    <ul class="unorder">
+        <li>100 cards-10% Off</li>
+        <li>200 cards-15% Off</li>
+        <li>300 cards-20% Off</li>
+        <li>400 cards-25% Off</li>
+        <li>500 cards-30% Off</li>
+    </ul>
+    <button>Stock Clearance - 40% to 60% off</button>
+    <p class="para-small">This offer is not appicable on customized card,<br>E-cards and luxury boxes.</p>
+    </div>
+</section>
+    
+<section class="bride">
+    <div class="bride-groom">
+    <img src="images/d837d96d-e7ee-4f26-9eb0-4e6dc05faa95.png" style="width: 350px; height: 500px;">
+    <div>
+    <h1>Hindu Invitation Collections</h1>
+    <a href="buynow.html"><button>Buy Now</button></a>
+    </div>
+    </div>
+
+    <div class="bride-groom">
+    <img src="images/24186001-3ee7-4782-8e3a-481f0b2ab597.png" style="width: 350px; height: 500px;">
+    <div>
+    <h1>Hindu Invitation Collections</h1>
+    <button>Buy Now</button>
+    </div>
+    </div>
+
+    <div class="bride-groom">
+    <img src="images/328cfb90-dc85-4b2d-9789-a49a279029b7.png" style="width: 350px; height: 500px;">
+    <div>
+    <h1>Hindu Invitation Collections</h1>
+    <button>Buy Now</button>
+    </div>
+    </div>
+
+    <div class="bride-groom">
+    <img src="images/06840495-0637-45f7-8d4b-3377abe0b360.png" style="width: 350px; height: 500px;">
+    <div>
+    <h1>Hindu Invitation Collections</h1>
+    <button>Buy Now</button>
+    </div>
+    </div>
+
+</section>
+
+    <h3 style="text-align: center; margin-top: 4rem;">WHAT CLIENT SAY ABOUT US</h3>
+<section class="review-card">
+    <div class="reviews">
+        <img src="images/ChatGPT Image Sep 3, 2025, 04_30_51 PM.png" style="width: 100px; height: 100px; border-radius: 50%;margin-left: 1rem; margin-top: 1em;">
+        <h4 style="margin-left: 1rem;">James</h4>
+        <h4>Absolutely beautiful invites!</h4>
+        <p style="font-family: Verdana, Geneva, Tahoma, sans-serif;">We were blown away by the<br>quality and elegance of our<br>wedding
+     invitations. The paper felt<br> luxurious, and the printing was <br> flawless. Everyone keeps asking<br>where we got them from! </p>
+        <p style="margin-left: -1rem;">⭐⭐⭐⭐⭐</p>
+    </div>
+
+    <div class="reviews">
+        <img src="images/ChatGPT Image Sep 3, 2025, 04_47_38 PM.png" style="width: 100px; height: 100px; border-radius: 50%;margin-left: 1rem; margin-top: 1em; border: 1px solid black;">
+        <h4 style="margin-left: 1rem;">James</h4>
+        <h4>Absolutely beautiful invites!</h4>
+        <p style="font-family: Verdana, Geneva, Tahoma, sans-serif;">We were blown away by the<br>quality and elegance of our<br>wedding
+     invitations. The paper felt<br> luxurious, and the printing was <br> flawless. Everyone keeps asking<br>where we got them from! </p>
+        <p style="margin-left: -1rem;">⭐⭐⭐⭐⭐</p>
+    </div>
+
+    <div class="reviews">
+        <img src="images/ChatGPT Image Sep 3, 2025, 04_51_03 PM.png" style="width: 100px; height: 100px; border-radius: 50%;margin-left: 1rem; margin-top: 1em; border: 1px solid black;">
+        <h4 style="margin-left: 1rem;">James</h4>
+        <h4>Absolutely beautiful invites!</h4>
+        <p style="font-family: Verdana, Geneva, Tahoma, sans-serif;">We were blown away by the<br>quality and elegance of our<br>wedding
+     invitations. The paper felt<br> luxurious, and the printing was <br> flawless. Everyone keeps asking<br>where we got them from! </p>
+        <p style="margin-left: -1rem;">⭐⭐⭐⭐⭐</p>
+    </div>
+</section>
+
+<h2 style="text-align: center; font-weight: 700;">How It Works</h2>
+<section>
+    <div class="icons">
+        <div class="icons-detail">
+    <img src="images/icons8-purchase-order-64.png" style="width: 100px; height: 100px;">
+    <p>Order Sample</p>
+        </div>
+
+        <div class="icons-detail">
+    <img src="images/icons8-purchase-order-48.png" style="width: 100px; height: 100px;">
+    <p>Get Sample Order in 5 days</p>
+        </div>
+
+        <div class="icons-detail">
+    <img src="images/icons8-smartphone-approve-50.png" style="width:100px; height:100px">
+    <p>Approve Digital Draft</p>
+        </div>
+
+        <div class="icons-detail">
+    <img src="images/icons8-online-payment-with-a-credit-card-64.png" style="width: 100px; height: 100px;">
+    <p>Place Your Bulk Order</p>
+        </div>
+
+        <div class="icons-detail">
+    <img src="images/icons8-delivery-time-50.png" style="width: 100px; height: 100px;">
+    <p>Print & Delivery </p>
+        </div>
+    </div>
+</section>
+
+
+<footer>
+    <div class="full-footer">
+    <div class="footer-first">
+    <div class="footer-logo">
+    <img src="images/Copy of download__23_-removebg-preview.png" class="img-fluid" style="height: 200px; width: 200px; margin: 15px;" alt="..." >
+    <p class="next-cherish">Wed<br><span class="knot">Knot</span><br><span class="craft">Craft</span></p>
+    <p class="below-cherish">wedding cards</p>
+    <h5 style="font-weight: 700; margin-left: 35px; align-items: center;"><span style="margin-left: 10px;">Largest Wedding</span><br>Cards Collection in<br><span style="margin-left: 45px;">Chennai</span></h5>
+    </div>
+
+    
+     <div class="info">
+    <h2 style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: 600;">Information</h2>
+    <ul>
+        <a href="about.html"><li>About Us</li></a>
+        <a href="contact.html"><li>Contact Us</li></a>
+        <a href="faq.html"><li>FAQ</li></a>
+        <a href="order.html"><li>How to order wedding invitation<br>online?</li></a>
+    </ul>
+    </div>
+    </div>
+
+    <div class="quick-access">
+    <div>
+    <h2 style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: 600;">Quick Access</h2>
+    <ul>
+         <a href="#"><li>Home</li></a>
+         <a href="wedding-invitation.html"><li>Wedding Cards</li></a>
+         <a href="hindu-wedding.html"><li>Hindu Wedding Cards</li></a>
+    </ul>
+</div>
+
+    <div class="contact-us">
+    <h2 style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: 550;">Contact Us</h2>
+    <ul>
+         <a href="#"><li>+91 9876543210</li></a>
+         <a href="#"><li>Wedtype@weddingcards</li></a>
+         <a href="#"><li>Operating hours:10.00Am to<br>10.00Pm</li></a>
+          <a href="#"><li>Monday - Sunday</li></a>
+    </ul>
+    </div>
+    </div>
+    </div>
+
+    <div class="media">
+    <h5 style="margin: 15px; font-weight: 700; padding: 15px;">Follow us with</h5>
+    <div class="social">
+    <img src="images/icons8-instagram-48.png" style="width: 40px; height: 40px;">
+    <img src="images/icons8-facebook-48.png" style="width: 40px; height: 40px;">
+    <img src="images/icons8-youtube-48.png" style="width: 40px; height: 40px;">
+    <img src="images/icons8-whatsapp-48.png" style="width: 40px; height: 40px;">
+    <div>
+    </div>
+    
+    </div>
+
+    <h6 style="margin-top: 6rem; margin-left: 10.5em;">&copy Wed Knot craft india private limited.All Rights Reserved.</h6>
+</footer>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+</html>
