@@ -118,6 +118,39 @@
         color: black;
         
     }
+    .dr-menu{
+      display: none;
+      position: absolute;
+      list-style: none;
+      background: #e6c89d;
+      
+
+    }
+    .dr-menu li a{
+      display:inline-block;
+      padding: 3px;
+      font-size: 20px;
+      font-weight: 500;
+      color: black;
+      width: 250px;
+      margin-left: -30px;
+      text-decoration: none;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      transition: transform  0.3s ease;
+      position: relative;
+    }
+    .special:hover{
+      text-decoration: underline;
+    } 
+    .dr-menu li a:hover,
+    .dr-menu li a:focus {
+  text-decoration: none;
+  background-color: orange;
+  transform: scaleX(1);
+}
+    .home-list li:hover .dr-menu {
+      display: block;
+    }
     footer{
         margin-top: 5rem;
         background-color: rgb(246, 219, 169);
@@ -199,6 +232,31 @@
         left: 5.5em;
         top: 12.4em;
     }
+    .top input{
+        font-size: medium;
+        font-weight: 500;
+        color: black;
+        background-color: lavender;
+    }
+    .top input:hover{
+        background-color: rgb(246, 217, 179);
+         cursor: pointer;
+         
+    }
+    .bluish:hover{
+        background-color: rgb(116, 157, 229);
+        transition: 0.3s ease;
+        border-radius: 15px;
+        height: 50px;
+        
+    }
+    .info a li:hover{
+        color: white;
+        
+    }
+    .quick-access a li:hover{
+        color: white;
+    }
     </style>
 </head>
 <body>
@@ -208,25 +266,56 @@
         <p class="next-cherish">Wed<br><span class="knot">Knot</span><br><span class="craft">Craft</span></p>
         <p class="below-cherish">wedding cards</p>
         <div class="top">
-       <a href="search.html"><input type="text" placeholder="Search...." style="font-size: medium; font-weight: 500; color: black; background-color: lavender;"></a>
+       <a href="search.html"><input type="text" placeholder="Search...." ></a>
         <i id="search" class="fa-solid fa-magnifying-glass"></i>
-        <i class="bi bi-person"></i>
-        <i id="heart" class="bi bi-suit-heart"></i>
+        <a class="bluish" style="color: black;" href="signup.html"><i class="bi bi-person"></i></a>
+        <a class="bluish" style="color: black;" href="wish.html"><i id="heart" class="bi bi-suit-heart"></i></a>
     
-        <i id="cart" class="bi bi-cart3"></i>
-        <p class="one">1</p>
+        <a class="bluish" style="color: black;" href="cart.html"><i id="cart" class="bi bi-cart3"></i>
+        <p class="one">1</p></a>
         </div>
     </header>
-
-    <section>
+    
+   <section>
         <nav>
             <ul class="home-list">
         <li><a href="home.html">Home</a></li>
         <li><a href="wedding-invitation.html">Wedding Invitation</a></li>
-        <li><a href="#">Special Occasions</a></li>
-        <li><a href="#">Theme Cards</a></li>
-        <li><a href="#">Scroll Invitation</a></li>
-        <li><a href="#">Digital Invitation</a></li>
+        <li>
+          <a class="special" href="#">Special Occasions</a>
+          <ul class="dr-menu">
+            <li><a href="#">Birthday Invitations</a></li>
+            <li><a href="#">Puberty Cards</a></li>
+              <li><a href="#">Luxury Cards</a></li>
+                <li><a href="#">Ear Boring Cards</a></li>
+                  <li><a href="#">Engagement Cards</a></li>
+                    <li><a href="#">House Cards</a></li>
+                      <li><a href="#">Anniversary Cards</a></li>
+          </ul>
+        
+        </li>
+        <li><a class="special" href="#">Theme Cards</a>
+        <ul class="dr-menu">
+            <li><a href="#">Beach Theme Cards </a></li>
+            <li><a href="#">Bride Theme Cards</a></li>
+              <li><a href="#">Box Cards</a></li>
+                <li><a href="#">Single Sheet Cards</a></li>
+        </ul>
+        </li>
+        <li><a class="special" href="#">Scroll Invitation</a>
+        <ul class="dr-menu">
+            <li><a href="#">Small Size Scroll</a></li>
+            <li><a href="#">Box Scroll</a></li>
+              <li><a href="#">Only Scroll</a></li>
+                <li><a href="#">High End Scroll</a></li>
+        </ul>
+        </li>
+        <li><a class="special" href="#">Digital Invitation</a>
+        <ul class="dr-menu">
+            <li><a href="#">Whatsapp Cards</a></li>
+            <li><a href="#">Save the Date Cards</a></li>
+        </ul>
+        </li>
             </ul>
         </nav>
     </section>
